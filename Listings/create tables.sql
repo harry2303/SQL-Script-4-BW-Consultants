@@ -18,27 +18,27 @@ CREATE COLUMN TABLE banks
 CREATE COLUMN TABLE bp
 (
 	id        INT PRIMARY KEY,
-	firstname NVARCHAR(20),
-	lastname  NVARCHAR(20),
+	firstname NVARCHAR(20) NOT NULL,
+	lastname  NVARCHAR(20) NOT NULL,
 	street    NVARCHAR(20),
-    zipcode   INT,
+    zipcode   INT NOT NULL,
     place     NVARCHAR(20)
 );
 CREATE COLUMN TABLE accounts
 (
     id        INT PRIMARY KEY,
-	created   DATE,
-    type_id   INT(2),
+	created   DATE NOT NULL,
+    type_id   INT(2) NOT NULL,
     type      VARCHAR(8),
-    iban      VARCHAR(22),
+    iban      VARCHAR(22) NOT NULL,
 	desctxt   NVARCHAR(40)
 );
 CREATE COLUMN TABLE bk_bp_accnt
 (
 	id        INT PRIMARY KEY,
-	bic       INT FOREIGN KEY bank.bic,
-	bp_id     INT FOREIGN KEY bp.id,
-	accnt_id  INT FOREIGN KEY accounts.id
+	bic       INT FOREIGN KEY REFERENCES bank(bic),
+	bp_id     INT FOREIGN KEY REFERENCES bp(id),
+	accnt_id  INT FOREIGN KEY REFERENCES accounts(id)
 	desctxt   NVARCHAR(40)
 );
 CREATE COLUMN TABLE error_log

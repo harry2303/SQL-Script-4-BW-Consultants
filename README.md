@@ -2,4 +2,4 @@
 SQL Script Quellen für die Schulung "SQL Script für BW Consultants"
 
 # Entity-Relationship-Modell in Martin-Notation
-[!Entity-Relationship-Modell in Martin-Notation(ERM/Demo-Datenmodell.png)]
+[!Entity-Relationship-Modell in Martin-Notation(./ERM/Demo-Datenmodell.png)]

@@ -1,47 +1,57 @@
-/* Automatisiertes Anlegen der DB-Tabellen des Demo Datenmodells
+/* Automatisiertes Anlegen der DB-Tabellen Demo Datenmodells
 zur Schulung "SQL Script für BW Consultants"
 per DDL CREATE Anweisungen */
 -- Harald Schütt, 23.04.2020
 
 CREATE COLUMN TABLE banks
 (
-	bic       VARCHAR(11)  PRIMARY KEY, --example COBADEFF
+	bic       VARCHAR(11), --example COBADEFF
 	name      NVARCHAR(20),
 	street    NVARCHAR(20),
 	zipcode   INT,
-    place     NVARCHAR(20)
+    place     NVARCHAR(20),
+	primary key (bic)
 )
 COMMENT 'Table with banks';
 
 CREATE COLUMN TABLE bp
 (
-	id        INT PRIMARY KEY,
+	id        INT,
 	firstname NVARCHAR(20) NOT NULL,
 	lastname  NVARCHAR(20) NOT NULL,
 	street    NVARCHAR(20),
     zipcode   INT NOT NULL,
-    place     NVARCHAR(20)
+    place     NVARCHAR(20),
+	primary key (id)
 )
 COMMENT 'Table with Business Partners (Customers)';
 
 CREATE COLUMN TABLE accounts
 (
-    id        INT PRIMARY KEY,
+    id        INT,
 	created   DATE NOT NULL,
-    type_id   INT(2) NOT NULL,
+    type_id   INT NOT NULL,
     type      VARCHAR(8),
     iban      VARCHAR(22) NOT NULL,
-	desctxt   NVARCHAR(40)
+	desctxt   NVARCHAR(40),
+	primary key (id)
 )
 COMMENT 'Table with active accounts';
 
 CREATE COLUMN TABLE bk_bp_accnt
 (
-	id        INT PRIMARY KEY,
-	bic       INT FOREIGN KEY REFERENCES bank(bic),
-	bp_id     INT FOREIGN KEY REFERENCES bp(id),
-	accnt_id  INT FOREIGN KEY REFERENCES accounts(id)
-	desctxt   NVARCHAR(40)
+	id        INT,
+	bic       INT,
+	bp_id     INT,
+	accnt_id  INT,
+	desctxt   NVARCHAR(40),
+	primary key (id),
+	foreign key (bic)
+	references banks (bic),
+	foreign key (bp_id)
+	references bp (id),
+	foreign key (accnt_id)
+	references accounts (id)
 )
 COMMENT 'Table with active accounts per bank and per customer';
 

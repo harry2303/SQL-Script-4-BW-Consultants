@@ -1,3 +1,7 @@
-# ignore a file type
+# ignore a file type in current directory
 *.ini
 *.lnk
+# Ignore all .bck files in all (sub) directories
+**/*.bck
+**/*.ini
+**/*.lnk

@@ -6,5 +6,6 @@ per DDL CREATE Anweisungen */
 DROP TABLE banks CASCADE;
 DROP TABLE bp CASCADE;
 DROP TABLE accounts CASCADE;
+DROP TABLE transcactions;
 DROP TABLE bk_bp_accnt;
 DROP TABLE error_log;

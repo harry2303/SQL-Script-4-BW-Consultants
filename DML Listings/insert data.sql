@@ -95,17 +95,17 @@ insert into banks VALUES ('PICTDEFFXXX', 'Pictet & Cie Europe Ffm', 60311, 'Fran
 insert into banks VALUES ('FTSBDEFAXXX', 'ABN AMRO Bank', 60325, 'Frankfurt am Main');
 -- 
 -- Daten für Tabelle bp
-insert into bp VALUES (BPSequ.nextval, 'Jonah', 'Beams', ); -- generate primary key by sequence BPSequ
-insert into bp VALUES (BPSequ.nextval, 'North', 'Bryett', ); -- generate primary key by sequence BPSequ
-insert into bp VALUES (BPSequ.nextval, 'Brietta', 'Nerney', ); -- generate primary key by sequence BPSequ
-insert into bp VALUES (BPSequ.nextval, 'Ailis', 'Lampke', ); -- generate primary key by sequence BPSequ
-insert into bp VALUES (BPSequ.nextval, 'Frayda', 'Tolle', ); -- generate primary key by sequence BPSequ
-insert into bp VALUES (BPSequ.nextval, 'Ferdy', 'Duester', ); -- generate primary key by sequence BPSequ
-insert into bp VALUES (BPSequ.nextval, 'Olag', 'Wemes', ); -- generate primary key by sequence BPSequ
-insert into bp VALUES (BPSequ.nextval, 'Alfredo', 'Orth', ); -- generate primary key by sequence BPSequ
-insert into bp VALUES (BPSequ.nextval, 'Sharity', 'Lodwick', ); -- generate primary key by sequence BPSequ
-insert into bp VALUES (BPSequ.nextval, 'Agnese', 'Fideler', ); -- generate primary key by sequence BPSequ
-insert into bp VALUES (BPSequ.nextval, 'Doralin', 'Fernley', ); -- generate primary key by sequence BPSequ
+insert into bp VALUES (BPSequ.nextval, 'Jonah', 'Beams', 'Alt-Moabit 17', RPAD(ROUND(RAND()*99999),5,0), 'Hochstrom');          -- generate primary key by sequence BPSequ
+insert into bp VALUES (BPSequ.nextval, 'North', 'Bryett', 'Neue Roßstr. 73', RPAD(ROUND(RAND()*99999),5,0), 'Feuerhöhe');       -- generate primary key by sequence BPSequ
+insert into bp VALUES (BPSequ.nextval, 'Brietta', 'Nerney', 'Pasewalker Straße 85', RPAD(ROUND(RAND()*99999),5,0), 'Schwalbensumpf'); -- generate primary key by sequence BPSequ
+insert into bp VALUES (BPSequ.nextval, 'Ailis', 'Lampke', 'Leipziger Strasse 34', RPAD(ROUND(RAND()*99999),5,0), 'Wolfsfurt');  -- generate primary key by sequence BPSequ
+insert into bp VALUES (BPSequ.nextval, 'Frayda', 'Tolle', 'Gotzkowskystrasse 56', RPAD(ROUND(RAND()*99999),5,0), 'Fuchssteig'); -- generate primary key by sequence BPSequ
+insert into bp VALUES (BPSequ.nextval, 'Ferdy', 'Duester', 'Hoheluftchaussee 2', RPAD(ROUND(RAND()*99999),5,0), 'Schönmeer');   -- generate primary key by sequence BPSequ
+insert into bp VALUES (BPSequ.nextval, 'Olag', 'Wemes', 'Rohrdamm 32', RPAD(ROUND(RAND()*99999),5,0), 'Kaltenstiege');          -- generate primary key by sequence BPSequ
+insert into bp VALUES (BPSequ.nextval, 'Alfredo', 'Orth', 'Eichendorffstr. 45', RPAD(ROUND(RAND()*99999),5,0), 'Klingental');   -- generate primary key by sequence BPSequ
+insert into bp VALUES (BPSequ.nextval, 'Sharity', 'Lodwick', 'Bleibtreustrasse 19', RPAD(ROUND(RAND()*99999),5,0), 'Sonnenberge'); -- generate primary key by sequence BPSequ
+insert into bp VALUES (BPSequ.nextval, 'Agnese', 'Fideler', 'Genslerstraße 13', RPAD(ROUND(RAND()*99999),5,0), 'Eichenwalde');  -- generate primary key by sequence BPSequ
+insert into bp VALUES (BPSequ.nextval, 'Doralin', 'Fernley', 'Luckenwalder Strasse 73', RPAD(ROUND(RAND()*99999),5,0), 'Goldwies'); -- generate primary key by sequence BPSequ
 --
 -- Daten für Tabelle Accounts
 insert into accounts VALUES (AccntsSequ.nextval, 'DXIADEBBXXX', CURRENT_DATE); -- generate primary key by sequence AccntsSequ

@@ -7,7 +7,6 @@ CREATE COLUMN TABLE banks
 (
 	bic       VARCHAR(11), --example COBADEFF
 	name      NVARCHAR(20),
-	street    NVARCHAR(20),
 	zipcode   INT,
     place     NVARCHAR(20),
 	primary key (bic)

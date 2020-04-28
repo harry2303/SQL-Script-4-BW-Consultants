@@ -48,12 +48,10 @@ CREATE COLUMN TABLE saldos
 	currency  VARCHAR(3), -- Currency ISO Codes
 	amount    DECIMAL(17, 2), 
 	primary key (id),
-	foreign key (bic)
-	references banks (bic),
 	foreign key (bp_id)
 	references bp (id),
-	foreign key (accnt_id)
-	references accounts (id)
+	foreign key (accnt_id, bic)
+	references accounts (id, bic)
 )
 COMMENT 'Table with transactions per accounts, bank and customer';
 

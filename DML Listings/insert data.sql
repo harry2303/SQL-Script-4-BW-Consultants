@@ -95,27 +95,150 @@ insert into banks VALUES ('PICTDEFFXXX', 'Pictet & Cie Europe Ffm', 60311, 'Fran
 insert into banks VALUES ('FTSBDEFAXXX', 'ABN AMRO Bank', 60325, 'Frankfurt am Main');
 -- 
 -- Daten für Tabelle bp
-insert into bp VALUES (BPSequ.nextval, 'Sebastian', 'Theissen', 'Alt-Moabit 17', RPAD(ROUND(RAND()*99999),5,0), 'Hochstrom');     -- generate primary key by sequence BPSequ
-insert into bp VALUES (BPSequ.nextval, 'Jennifer', 'Dresner', 'Neue Roßstr. 73', RPAD(ROUND(RAND()*99999),5,0), 'Feuerhöhe');     -- generate primary key by sequence BPSequ
-insert into bp VALUES (BPSequ.nextval, 'Ute', 'Walter', 'Pasewalker Straße 85', RPAD(ROUND(RAND()*99999),5,0), 'Schwalbensumpf'); -- generate primary key by sequence BPSequ
-insert into bp VALUES (BPSequ.nextval, 'Peter', 'Bieber', 'Leipziger Strasse 34', RPAD(ROUND(RAND()*99999),5,0), 'Wolfsfurt');    -- generate primary key by sequence BPSequ
-insert into bp VALUES (BPSequ.nextval, 'Anja', 'Nagel', 'Gotzkowskystrasse 56', RPAD(ROUND(RAND()*99999),5,0), 'Fuchssteig');     -- generate primary key by sequence BPSequ
-insert into bp VALUES (BPSequ.nextval, 'Janina', 'Lehmann', 'Hoheluftchaussee 2', RPAD(ROUND(RAND()*99999),5,0), 'Schönmeer');    -- generate primary key by sequence BPSequ
-insert into bp VALUES (BPSequ.nextval, 'Sven', 'Klein', 'Rohrdamm 32', RPAD(ROUND(RAND()*99999),5,0), 'Kaltenstiege');            -- generate primary key by sequence BPSequ
-insert into bp VALUES (BPSequ.nextval, 'Angelika', 'Bar', 'Eichendorffstr. 45', RPAD(ROUND(RAND()*99999),5,0), 'Klingental');     -- generate primary key by sequence BPSequ
-insert into bp VALUES (BPSequ.nextval, 'Andreas', 'Trommler', 'Bleibtreustrasse 19', RPAD(ROUND(RAND()*99999),5,0), 'Sonnenberge'); -- generate primary key by sequence BPSequ
-insert into bp VALUES (BPSequ.nextval, 'Uta', 'Fideler', 'Genslerstraße 13', RPAD(ROUND(RAND()*99999),5,0), 'Eichenwalde');       -- generate primary key by sequence BPSequ
-insert into bp VALUES (BPSequ.nextval, 'Franziska', 'Meier', 'Luckenwalder Strasse 73', RPAD(ROUND(RAND()*99999),5,0), 'Goldwies'); -- generate primary key by sequence BPSequ
+insert into bp VALUES (10, 'Jennifer', 'Dresner', 'Neue Roßstr. 73', RPAD(ROUND(RAND()*99999),5,0), 'Feuerhöhe');
+insert into bp VALUES (20, 'Ute', 'Walter', 'Pasewalker Straße 85', RPAD(ROUND(RAND()*99999),5,0), 'Schwalbensumpf');
+insert into bp VALUES (30, 'Peter', 'Bieber', 'Leipziger Strasse 34', RPAD(ROUND(RAND()*99999),5,0), 'Wolfsfurt');
+insert into bp VALUES (40, 'Sebastian', 'Theissen', 'Alt-Moabit 17', RPAD(ROUND(RAND()*99999),5,0), 'Hochstrom');
+insert into bp VALUES (50, 'Anja', 'Nagel', 'Gotzkowskystrasse 56', RPAD(ROUND(RAND()*99999),5,0), 'Fuchssteig');
+insert into bp VALUES (60, 'Janina', 'Lehmann', 'Hoheluftchaussee 2', RPAD(ROUND(RAND()*99999),5,0), 'Schönmeer');
+insert into bp VALUES (70, 'Sven', 'Klein', 'Rohrdamm 32', RPAD(ROUND(RAND()*99999),5,0), 'Kaltenstiege');
+insert into bp VALUES (80, 'Angelika', 'Bar', 'Eichendorffstr. 45', RPAD(ROUND(RAND()*99999),5,0), 'Klingental');
+insert into bp VALUES (90, 'Andreas', 'Trommler', 'Bleibtreustrasse 19', RPAD(ROUND(RAND()*99999),5,0), 'Sonnenberge');
+insert into bp VALUES (100, 'Uta', 'Fideler', 'Genslerstraße 13', RPAD(ROUND(RAND()*99999),5,0), 'Eichenwalde');
+insert into bp VALUES (110, 'Franziska', 'Meier', 'Luckenwalder Strasse 73', RPAD(ROUND(RAND()*99999),5,0), 'Goldwies');
 --
 -- Daten für Tabelle Accounts
-insert into accounts VALUES (AccntsSequ.nextval, 'DXIADEBBXXX', CURRENT_DATE); -- generate primary key by sequence AccntsSequ
-insert into accounts VALUES (AccntsSequ.nextval, 'MEFIDEMM501', CURRENT_DATE); -- generate primary key by sequence AccntsSequ
-insert into accounts VALUES (AccntsSequ.nextval, 'RABODEFFTAR', CURRENT_DATE); -- generate primary key by sequence AccntsSequ
-insert into accounts VALUES (AccntsSequ.nextval, 'DRESDEFFXXX', CURRENT_DATE); -- generate primary key by sequence AccntsSequ
-insert into accounts VALUES (AccntsSequ.nextval, 'HELADEFFXXX', CURRENT_DATE); -- generate primary key by sequence AccntsSequ
-insert into accounts VALUES (AccntsSequ.nextval, 'FBGADEF1XXX', CURRENT_DATE); -- generate primary key by sequence AccntsSequ
-insert into accounts VALUES (AccntsSequ.nextval, 'MARKDEF1500', CURRENT_DATE); -- generate primary key by sequence AccntsSequ
-insert into accounts VALUES (AccntsSequ.nextval, 'AUSKDEFFXXX', CURRENT_DATE); -- generate primary key by sequence AccntsSequ
-insert into accounts VALUES (AccntsSequ.nextval, 'ICBVDEFFXXX', CURRENT_DATE); -- generate primary key by sequence AccntsSequ
-insert into accounts VALUES (AccntsSequ.nextval, 'SMHBDEFFXXX', CURRENT_DATE); -- generate primary key by sequence AccntsSequ
-insert into accounts VALUES (AccntsSequ.nextval, 'ESSEDEFFHAM', CURRENT_DATE); -- generate primary key by sequence AccntsSequ
+insert into accounts VALUES (200100, 'DXIADEBBXXX', CURRENT_DATE);
+insert into accounts VALUES (500200, 'MEFIDEMM501', CURRENT_DATE);
+insert into accounts VALUES (600300, 'RABODEFFTAR', CURRENT_DATE);
+insert into accounts VALUES (700400, 'DRESDEFFXXX', CURRENT_DATE);
+insert into accounts VALUES (880500, 'HELADEFFXXX', CURRENT_DATE);
+insert into accounts VALUES (990600, 'FBGADEF1XXX', CURRENT_DATE);
+insert into accounts VALUES (110700, 'MARKDEF1500', CURRENT_DATE);
+insert into accounts VALUES (540800, 'AUSKDEFFXXX', CURRENT_DATE);
+insert into accounts VALUES (760900, 'ICBVDEFFXXX', CURRENT_DATE);
+insert into accounts VALUES (244100, 'SMHBDEFFXXX', CURRENT_DATE);
+insert into accounts VALUES (210199, 'ESSEDEFFHAM', CURRENT_DATE);
+--
+-- Daten für Tabelle Saldos
+-- 10 200100
+insert into saldos VALUES (SaldoSequ.nextval, 10, 200100, 20190131, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 10, 200100, 20190228, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 10, 200100, 20190331, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 10, 200100, 20190430, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 10, 200100, 20190531, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 10, 200100, 20190630, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 10, 200100, 20190731, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 10, 200100, 20190831, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 10, 200100, 20190930, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 10, 200100, 20191031, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+-- 20 500200
+insert into saldos VALUES (SaldoSequ.nextval, 20, 500200, 20190131, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 20, 500200, 20190228, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 20, 500200, 20190331, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 20, 500200, 20190430, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 20, 500200, 20190531, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 20, 500200, 20190630, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 20, 500200, 20190731, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 20, 500200, 20190831, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 20, 500200, 20190930, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 20, 500200, 20191031, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+-- 30 600300
+insert into saldos VALUES (SaldoSequ.nextval, 30, 600300, 20190131, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 30, 600300, 20190228, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 30, 600300, 20190331, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 30, 600300, 20190430, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 30, 600300, 20190531, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 30, 600300, 20190630, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 30, 600300, 20190731, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 30, 600300, 20190831, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 30, 600300, 20190930, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 30, 600300, 20191031, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+-- 40 700400
+insert into saldos VALUES (SaldoSequ.nextval, 40, 700400, 20190131, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 40, 700400, 20190228, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 40, 700400, 20190331, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 40, 700400, 20190430, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 40, 700400, 20190531, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 40, 700400, 20190630, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 40, 700400, 20190731, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 40, 700400, 20190831, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 40, 700400, 20190930, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 40, 700400, 20191031, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+-- 50 880500
+insert into saldos VALUES (SaldoSequ.nextval, 50, 880500, 20190131, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 50, 880500, 20190228, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 50, 880500, 20190331, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 50, 880500, 20190430, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 50, 880500, 20190531, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 50, 880500, 20190630, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 50, 880500, 20190731, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 50, 880500, 20190831, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 50, 880500, 20190930, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 50, 880500, 20191031, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+-- 60 990600
+insert into saldos VALUES (SaldoSequ.nextval, 60, 990600, 20190131, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 60, 990600, 20190228, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 60, 990600, 20190331, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 60, 990600, 20190430, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 60, 990600, 20190531, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 60, 990600, 20190630, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 60, 990600, 20190731, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 60, 990600, 20190831, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 60, 990600, 20190930, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 60, 990600, 20191031, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+-- 70 110700
+insert into saldos VALUES (SaldoSequ.nextval, 70, 110700, 20190131, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 70, 110700, 20190228, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 70, 110700, 20190331, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 70, 110700, 20190430, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 70, 110700, 20190531, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 70, 110700, 20190630, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 70, 110700, 20190731, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 70, 110700, 20190831, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 70, 110700, 20190930, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 70, 110700, 20191031, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+-- 80 540800
+insert into saldos VALUES (SaldoSequ.nextval, 80, 540800, 20190131, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 80, 540800, 20190228, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 80, 540800, 20190331, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 80, 540800, 20190430, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 80, 540800, 20190531, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 80, 540800, 20190630, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 80, 540800, 20190731, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 80, 540800, 20190831, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 80, 540800, 20190930, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 80, 540800, 20191031, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+-- 90 760900
+insert into saldos VALUES (SaldoSequ.nextval, 90, 760900, 20190131, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 90, 760900, 20190228, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 90, 760900, 20190331, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 90, 760900, 20190430, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 90, 760900, 20190531, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 90, 760900, 20190630, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 90, 760900, 20190731, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 90, 760900, 20190831, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 90, 760900, 20190930, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 90, 760900, 20191031, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+-- 100 244100
+insert into saldos VALUES (SaldoSequ.nextval, 100, 244100, 20190131, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 100, 244100, 20190228, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 100, 244100, 20190331, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 100, 244100, 20190430, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 100, 244100, 20190531, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 100, 244100, 20190630, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 100, 244100, 20190731, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 100, 244100, 20190831, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 100, 244100, 20190930, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 100, 244100, 20191031, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+-- 110 210199
+insert into saldos VALUES (SaldoSequ.nextval, 110, 210199, 20190131, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 110, 210199, 20190228, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 110, 210199, 20190331, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 110, 210199, 20190430, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 110, 210199, 20190531, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 110, 210199, 20190630, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 110, 210199, 20190731, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 110, 210199, 20190831, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 110, 210199, 20190930, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+insert into saldos VALUES (SaldoSequ.nextval, 110, 210199, 20191031, NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ

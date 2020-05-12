@@ -13,3 +13,8 @@ SELECT accnt_id AS id FROM saldos;
 -- INNER JOIN ... ON ...
 SELECT a.id FROM accounts a INNER JOIN saldos s
 ON a.id = s.accnt_id;
+
+-- Verdopplung der Datenmenge der Tabelle banks per UNION Operator
+SELECT * FROM banks
+UNION ALL
+SELECT * FROM banks;

@@ -242,3 +242,23 @@ insert into saldos VALUES (SaldoSequ.nextval, 210199, 'ESSEDEFFHAM', '20190731',
 insert into saldos VALUES (SaldoSequ.nextval, 210199, 'ESSEDEFFHAM', '20190831', NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
 insert into saldos VALUES (SaldoSequ.nextval, 210199, 'ESSEDEFFHAM', '20190930', NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
 insert into saldos VALUES (SaldoSequ.nextval, 210199, 'ESSEDEFFHAM', '20191031', NULL, 'EUR', ROUND(TO_DECIMAL(1+(99999-1)*RAND()),2)); -- generate primary key by sequence SaldoSequ
+--
+-- Daten für Tabelle Transactions
+-- 200100
+insert into transactions VALUES (TrnsSequ.nextval, 200100, 'DXIADEBBXXX', '20190131', 'EUR', 3500); -- generate primary key by sequence TrnsSequ
+insert into transactions VALUES (TrnsSequ.nextval, 200100, 'DXIADEBBXXX', '20190228', 'EUR', -500); -- generate primary key by sequence TrnsSequ
+insert into transactions VALUES (TrnsSequ.nextval, 200100, 'DXIADEBBXXX', '20190331', 'EUR', -300); -- generate primary key by sequence TrnsSequ
+insert into transactions VALUES (TrnsSequ.nextval, 200100, 'DXIADEBBXXX', '20190430', 'EUR', 150); -- generate primary key by sequence TrnsSequ
+insert into transactions VALUES (TrnsSequ.nextval, 200100, 'DXIADEBBXXX', '20190531', 'EUR', -1000); -- generate primary key by sequence TrnsSequ
+insert into transactions VALUES (TrnsSequ.nextval, 200100, 'DXIADEBBXXX', '20190630', 'EUR', -5); -- generate primary key by sequence TrnsSequ
+insert into transactions VALUES (TrnsSequ.nextval, 200100, 'DXIADEBBXXX', '20190731', 'EUR', 25); -- generate primary key by sequence TrnsSequ
+-- 500200
+insert into transactions VALUES (TrnsSequ.nextval, 500200, 'MEFIDEMM501', '20190131', 'EUR', -300); -- generate primary key by sequence TrnsSequ
+insert into transactions VALUES (TrnsSequ.nextval, 500200, 'MEFIDEMM501', '20190228', 'EUR', -150); -- generate primary key by sequence TrnsSequ
+insert into transactions VALUES (TrnsSequ.nextval, 500200, 'MEFIDEMM501', '20190331', 'EUR', 50); -- generate primary key by sequence TrnsSequ
+insert into transactions VALUES (TrnsSequ.nextval, 500200, 'MEFIDEMM501', '20190430', 'EUR', 33); -- generate primary key by sequence TrnsSequ
+insert into transactions VALUES (TrnsSequ.nextval, 500200, 'MEFIDEMM501', '20190531', 'EUR', -25); -- generate primary key by sequence TrnsSequ
+-- 600300
+insert into transactions VALUES (TrnsSequ.nextval, 600300, 'RABODEFFTAR', '20190131', 'EUR', 130); -- generate primary key by sequence TrnsSequ
+insert into transactions VALUES (TrnsSequ.nextval, 600300, 'RABODEFFTAR', '20190228', 'EUR', -30); -- generate primary key by sequence TrnsSequ
+insert into transactions VALUES (TrnsSequ.nextval, 600300, 'RABODEFFTAR', '20190228', 'EUR', -10); -- generate primary key by sequence TrnsSequ

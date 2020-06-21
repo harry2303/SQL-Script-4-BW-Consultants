@@ -1,5 +1,5 @@
 /* Prüfung der Installation des Demo Datenmodells
-   und der generierten Menge an Testdaten*/
+   und der generierten Menge an Testdaten */
 -- Harald Schütt, 28.04.2020
 
 select 'banks' as Tabelle, count(*) as Istmenge, '90'  as Sollmenge from banks    union

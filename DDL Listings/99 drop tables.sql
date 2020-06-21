@@ -1,5 +1,5 @@
 /* Automatisiertes Löschen der DB-Tabellen des Demo Datenmodells
-zur Schulung "SQL Script für BW Consultants"
+zur Schulung "SQL Script 4 BW Consultants"
 per DDL CREATE Anweisungen */
 -- Harald Schütt, 24.04.2020
 
@@ -8,3 +8,4 @@ DROP TABLE bp CASCADE;
 DROP TABLE accounts CASCADE;
 DROP TABLE saldos;
 DROP TABLE error_log;
+DROP TABLE transactions;

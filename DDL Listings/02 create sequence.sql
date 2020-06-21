@@ -1,5 +1,5 @@
 /* Automatisiertes Anlegen von Sequencen im Demo Datenmodell
-zur Nutzung innerhalb der Schulung "SQL Script für BW Consultants"
+zur Nutzung innerhalb der Schulung "SQL Script 4 BW Consultants"
 per DDL CREATE Anweisungen */
 -- Harald Schütt, 25.04.2020
 CREATE SEQUENCE mySequence START WITH 1000 INCREMENT BY 10 NO MAXVALUE NO MINVALUE NO CYCLE;

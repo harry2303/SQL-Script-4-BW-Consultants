@@ -1,5 +1,5 @@
 /* Automatisiertes Anlegen der DB-Tabellen Demo Datenmodells
-zur Schulung "SQL Script für BW Consultants"
+zur Schulung "SQL Script 4 BW Consultants"
 per DDL CREATE Anweisungen */
 -- Harald Schütt, 05.05.2020
 

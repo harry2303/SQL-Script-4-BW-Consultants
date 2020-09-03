@@ -8,7 +8,7 @@ CREATE TYPE tt_dml AS TABLE (firstname NVARCHAR(20), lastname NVARCHAR(20), bnk_
 DO
 BEGIN
 --DML Tabellenvariable auf Basis des Tabellentyps deklarieren
-DECLARE lt_dml TABLE LIKE tt_dml;
+DECLARE lt_dml tt_dml;
 
 --Daten aus Tabelle bp einer "normalen" Tab.var zuweisen
 lt_bp = SELECT id, firstname, lastname FROM bp;

@@ -23,9 +23,10 @@ SELECT * FROM :lt_bp_accnts;
 
 --DML Teil
 --Daten aus normaler Tab.var der DML Tab.var zuweisen
-INSERT INTO :lt_dml (SELECT * FROM :lt_bp_accnts);
+--INSERT INTO :lt_dml (SELECT * FROM :lt_bp_accnts);--möglich falls Struktur bereits passt 
+INSERT INTO :lt_dml (SELECT firstname, lastname, bnk_bic, id FROM :lt_bp_accnts);
 
---Optional: Ausgabe Resultat aus DML Tab.var                
+--Ausgabe Resultat aus DML Tab.var                
 SELECT * FROM :lt_dml; 
 END;
 

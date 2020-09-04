@@ -1,0 +1,2 @@
+/* PATCH Feldlänge Datentyp Feld CALMONTH in Tabelle SALDOS */
+ALTER TABLE SALDOS ALTER (CALMONTH NVARCHAR(11));

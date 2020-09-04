@@ -1,3 +1,7 @@
+-- Übung 10: Anlegen einer User Defined Function (UDF)
+-- Musterlösungen für alle Teilaufgaben der Übung
+/*************************************************************/
+--Lösungsvorschlag:
 CREATE OR REPLACE FUNCTION UDF_DATE_CALMONTH (IN iv_date DATE)
             RETURNS rv_calmonth NVARCHAR(11)
             LANGUAGE SQLSCRIPT

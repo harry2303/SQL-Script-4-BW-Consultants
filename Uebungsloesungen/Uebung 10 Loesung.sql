@@ -11,3 +11,6 @@ DECLARE lv_date DATE;
 lv_date = TRIM(:iv_date);--removing leading and trailing spaces
 rv_calmonth = TO_NVARCHAR(:lv_date, 'YYYYMM');--calmonth format
 END;
+
+--Ausgabe aller Felder inkl. gefülltem CALMONTH aus Tabelle saldos
+SELECT ID,ACCNT_ID,BNK_BIC,SLDDATE,UDF_DATE_CALMONTH(SLDDATE) AS CALMONTH,CURRENCY,AMOUNT FROM saldos;

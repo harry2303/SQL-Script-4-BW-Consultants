@@ -45,7 +45,7 @@ CREATE COLUMN TABLE saldos
 	accnt_id  INT,
 	bnk_bic   VARCHAR(11),
 	slddate   DATE, --Saldo date
-	calmonth  NVARCHAR, --TO_NVARCHAR(slddate,'YYYYMM')  
+	calmonth  NVARCHAR(6), --TO_NVARCHAR(slddate,'YYYYMM')  
 	currency  VARCHAR(3), --Currency ISO Code
 	amount    DECIMAL(17, 2), 
 	primary key (id),

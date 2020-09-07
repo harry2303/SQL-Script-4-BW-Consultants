@@ -59,5 +59,5 @@ END;
 
 
 
--- Aufruf der Procedure mit IN und OUT Parametern (hier: gebunden an Konsolenausgabe)
-CALL UPS_TRACNTS(600300, 'RABODEFFTAR', CURRENT_DATE, 'EUR', 150.00, ot_newrec => ?, ot_result => ?, ot_msg => ?);
+-- Aufruf der Procedure mit IN und OUT Parametern (hier: teilweise gebunden an Konsolenausgabe)
+CALL UPS_TRACNTS(600300, 'RABODEFFTAR', CURRENT_DATE, 'EUR', iv_amnt => ?, ot_newrec => ?, ot_result => ?, ot_msg => ?);

@@ -2,7 +2,9 @@
 -- Musterlösungen für alle Teilaufgaben der Übung
 /*************************************************************/
 --Lösungsvorschlag:
-CREATE OR REPLACE PROCEDURE UPS_TRACNTS (
+DROP PROCEDURE UPS_TRACNTS;
+--CREATE OR REPLACE PROCEDURE UPS_TRACNTS (  --not on BWE[HNA]
+CREATE PROCEDURE UPS_TRACNTS (
             IN iv_id    INT,
             IN iv_accnt INT       DEFAULT 600300,
             IN iv_bic VARCHAR(11) DEFAULT 'RABODEFFTAR',

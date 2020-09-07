@@ -3,17 +3,17 @@
 /*************************************************************/
 --Lösungsvorschlag:
 DROP FUNCTION UDF_CONV_TRACNTS;
---CREATE OR REPLACE FUNCTION UDF_CONV_TRACNTS() --not on BWE[HNA]
-CREATE FUNCTION UDF_CONV_TRACNTS()
+--CREATE OR REPLACE FUNCTION UDF_CONV_TRACNTS(IN iv_curr VARCHAR(3) DEFAULT 'USD') --not on BWE[HNA]
+CREATE FUNCTION UDF_CONV_TRACNTS(IN iv_curr VARCHAR(3) DEFAULT 'USD')
 RETURNS TABLE (id INT, accnt_id INT, bnk_bic VARCHAR(11), slddate date, currency VARCHAR(3), amount DECIMAL(17,2))
 AS
 BEGIN
-DECLARE lv_curr VARCHAR(3) = 'USD';
-RETURN SELECT id, accnt_id, bnk_bic, slddate, :lv_curr currency, 
+
+RETURN SELECT id, accnt_id, bnk_bic, slddate, :iv_curr currency, 
                         CONVERT_CURRENCY(
                                 AMOUNT => amount,
                                 SOURCE_UNIT => currency,
-                                TARGET_UNIT => :lv_curr,
+                                TARGET_UNIT => :iv_curr, --IN Parameter
                                 REFERENCE_DATE => slddate,
                                 SCHEMA => 'SAPABAP1', --BWE [HNA]
                                 CLIENT => '800', --BWE [HNA]
@@ -24,8 +24,10 @@ RETURN SELECT id, accnt_id, bnk_bic, slddate, :lv_curr currency,
 END;
 
 
---Abfrage der umgerechneten Beträge aus der Table UDF
-SELECT * FROM UDF_CONV_TRACNTS()
+--Abfrage der umgerechneten Beträge (Default: USD) aus der Table UDF
+SELECT * FROM UDF_CONV_TRACNTS();
+--Gegenüberstellung per UNION Daten aus Table UDF und Tabelle transactions
+SELECT * FROM UDF_CONV_TRACNTS('GBP') --Zielwährung parametrisiert
 UNION
 SELECT * FROM transactions --Prüfung gegen Originalwerte
 ORDER BY ID;

@@ -12,8 +12,7 @@ CREATE PROCEDURE UPS_TRACNTS (
             IN iv_curr VARCHAR(3) DEFAULT 'EUR', 
             IN iv_amnt DECIMAL(17,2) DEFAULT 0.00,
             OUT ot_result TRANSACTIONS, --Type: Table transactions
-            OUT ot_newrec TRANSACTIONS,
-            OUT ot_msg TABLE(MSGTY NVARCHAR(1), MSG_TEXT NVARCHAR(5000))
+            OUT ot_newrec TRANSACTIONS
             )
 LANGUAGE SQLSCRIPT
 SQL SECURITY DEFINER    --The default value for procedures is DEFINER
@@ -56,13 +55,12 @@ ot_newrec = SELECT * FROM transactions WHERE id = :lv_sequid;
 
 -- ------------------ RETURN RESULT
 ot_result = SELECT * FROM transactions;
-ot_msg = SELECT 'I' MSGTY, 'Transaktion wurde angepasst' MSG_TEXT FROM dummy;
 END;
 
 
 
 -- Aufruf der Procedure mit IN und OUT Parametern (hier: teilweise gebunden an Konsolenein-/ausgabe)
 -- Neuen Datensatz erzeugen --> Param. ID = NULL
-CALL UPS_TRACNTS(NULL, 600300, 'RABODEFFTAR', CURRENT_DATE, 'EUR', iv_amnt => ?, ot_newrec => ?, ot_result => ?, ot_msg => ?);
+CALL UPS_TRACNTS(NULL, 600300, 'RABODEFFTAR', CURRENT_DATE, 'EUR', iv_amnt => ?, ot_newrec => ?, ot_result => ?);
 --Datensatz ändern --> Param. ID = vorhandene Datensatz ID
-CALL UPS_TRACNTS(5044, 600300, 'RABODEFFTAR', CURRENT_DATE, 'EUR', iv_amnt => ?, ot_newrec => ?, ot_result => ?, ot_msg => ?);
+CALL UPS_TRACNTS(5044, 600300, 'RABODEFFTAR', CURRENT_DATE, 'EUR', iv_amnt => ?, ot_newrec => ?, ot_result => ?);

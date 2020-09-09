@@ -7,5 +7,5 @@ DROP TABLE banks CASCADE;
 DROP TABLE bp CASCADE;
 DROP TABLE accounts CASCADE;
 DROP TABLE saldos;
-DROP TABLE error_log;
 DROP TABLE transactions;
+DROP TABLE error_log;

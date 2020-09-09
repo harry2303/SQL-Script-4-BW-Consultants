@@ -1,8 +1,12 @@
 -- Übung 13: Exit Handler für eigene Fehlercodes und Logging
 -- Musterlösungen für alle Teilaufgaben der Übung
 /*************************************************************/
+--Lösungsvorschlag:
+DROP PROCEDURE PROCERR;
 --Procedure mit EXIT HANDLER Block, eigenem Fehlercode und INSERT in ERROR_LOG Tabelle
-CREATE PROCEDURE PROCERR (IN iv_val INTEGER, OUT outtab TABLE(I INTEGER) ) AS 
+--CREATE OR REPLACE PROCEDURE PROCERR (IN iv_val INTEGER, OUT outtab TABLE(I INTEGER) ) --not on BWE[HNA]
+CREATE PROCEDURE PROCERR (IN iv_val INTEGER, OUT outtab TABLE(I INTEGER) )
+AS 
 BEGIN
     DECLARE invalid_value CONDITION FOR SQL_ERROR_CODE 10000;
     DECLARE EXIT HANDLER FOR SQL_ERROR_CODE 10000

@@ -7,7 +7,8 @@ DROP FUNCTION UDF_DATE_CALMONTH;
 CREATE FUNCTION UDF_DATE_CALMONTH (IN iv_date DATE)
             RETURNS rv_calmonth NVARCHAR(11)
             LANGUAGE SQLSCRIPT
-            SQL SECURITY INVOKER AS --Scalar UDF Default: INVOKER
+            SQL SECURITY INVOKER --Scalar UDF Default: INVOKER
+AS
 BEGIN
 DECLARE lv_date DATE;
 lv_date = TRIM(IFNULL(:iv_date,'00000000'));--Not Null, removing leading and trailing spaces

@@ -63,6 +63,13 @@ FROM M_DATABASE -- Monitoring view
 SELECT *
 FROM M_SYSTEM_OVERVIEW -- Monitoring view
 ;
+
+/*
+Split HANA Version String --> Version & SP
+*/
+SELECT version, LEFT(version,1) VERSION, LEFT(SUBSTRING(version,6,7),2) SP FROM m_database
+;
+
 /*
 "Who am i" query 
 Returns the current user name at the current statement context.

@@ -8,7 +8,7 @@ BEGIN
 DECLARE lv_bic VARCHAR(11);
 lv_bic = IFNULL(:iv_bic,'HELADEFFXXX'); --falls IN Parameter leer
 --Testausgabe: Prüfung IFNULL Fkt.
-SELECT lv_bic BIC FROM dummy;
+SELECT :lv_bic BIC FROM dummy;
 
 --Tabelle saldos passend zum IN Parameter BIC auslesen
 lt_slds = SELECT SL.BNK_BIC, SL.ACCNT_ID, SL.SLDDATE

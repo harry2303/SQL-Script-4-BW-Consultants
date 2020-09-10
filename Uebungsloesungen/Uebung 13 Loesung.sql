@@ -16,7 +16,8 @@ FROM HIERARCHY (
                     FROM t_demo
                     ORDER BY ord )
                );
--- 
+--
+--NACHFOLGEKNOTEN:
 --Hierarchy DESCENDANTS, ab Knoten B2
 SELECT *
 FROM HIERARCHY_DESCENDANTS (

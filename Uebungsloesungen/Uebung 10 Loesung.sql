@@ -19,3 +19,6 @@ END;
 SELECT id, accnt_id, bnk_bic, slddate, UDF_DATE_CALMONTH(slddate) AS calmonth, currency, amount FROM saldos;
 --Aufruf mit "named parameter" -> Parametername gebunden an Feld oder Wert per Operator =>
 SELECT id, accnt_id, bnk_bic, slddate, UDF_DATE_CALMONTH(iv_date => slddate) AS calmonth, currency, amount FROM saldos;
+
+--Ändern einer Tabelle auf Basis von Werten einer User Defined Function
+UPDATE saldos SET calmonth = UDF_DATE_CALMONTH(slddate);

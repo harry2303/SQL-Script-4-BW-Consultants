@@ -17,3 +17,5 @@ END;
 
 --Ausgabe aller Felder inkl. gefülltem CALMONTH aus Tabelle saldos
 SELECT id, accnt_id, bnk_bic, slddate, UDF_DATE_CALMONTH(slddate) AS calmonth, currency, amount FROM saldos;
+--Aufruf mit "named parameter" -> Parametername gebunden an Feld oder Wert per Operator =>
+SELECT id, accnt_id, bnk_bic, slddate, UDF_DATE_CALMONTH(iv_date => slddate) AS calmonth, currency, amount FROM saldos;

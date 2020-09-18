@@ -21,7 +21,7 @@ SELECT length('AbcdefG3') "Feldlänge" FROM dummy;
 --ABAP Verkettungsoperator &&
 SELECT '12345' || '67890' "concat operator" FROM dummy;
 SELECT '123' || '45' || '67' || '890' "concat operator" FROM dummy;
---ABAP CONCATENATE, aber in SQL Fkt. nur 2 Strings
+--ABAP CONCATENATE, aber in SQL Fkt. CONCAT nur 2 Strings möglich
 SELECT CONCAT('12345','67890') "concatfkt" FROM dummy;
 
 --Zeichenketten beschneiden

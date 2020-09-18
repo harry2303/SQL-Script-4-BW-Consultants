@@ -1,7 +1,0 @@
---SQL Abfrage für SOURCE Parameter des HANA Hierarchy Generators 
-SELECT
-     to_nvarchar(P.NODENAME) AS PARENT_ID,
-     to_nvarchar(C.NODENAME) AS NODE_ID 
-FROM "SAPABAP1"."/BIC/HZCOSTELMN" C 
-LEFT JOIN "SAPABAP1"."/BIC/HZCOSTELMN" P ON C.PARENTID = P.NODEID
-ORDER BY C.NODEID; 

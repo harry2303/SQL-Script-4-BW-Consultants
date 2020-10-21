@@ -31,7 +31,7 @@ SELECT
      last_day(CURRENT_DATE)               AS MONATSLETZTER,
      lpad(week(date'2020-01-01'),2,0)     AS WOCHENNR,
      quarter(CURRENT_DATE)                AS QUARTAL,
-     weekday(CURRENT_DATE)                AS WOCHENTAG, -- range 0 to 6, 0 is Monday
+     weekday(CURRENT_DATE)                AS WOCHENTAG, -- Intervall 0 bis 6, 0 --> Monday
      dayname(CURRENT_DATE)                AS WOCHTAGNAME,
      lpad(dayofyear(CURRENT_DATE),3,0)    AS JAHRESTAG,-- 3-stelliges Format per LPAD Funktion
      days_between(CURRENT_DATE, date'20201231') AS TAGE_BIS_JAHRESENDE

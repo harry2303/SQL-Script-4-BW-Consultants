@@ -11,6 +11,11 @@ SELECT session_context('APPLICATIONUSER') FROM dummy; --SAP SY-UNAME
 --session variable reset
 UNSET 'DATE_FORMAT';
 
+--Setzen des ABAP-Modus für leere Zeichenketten
+SET 'ABAPVARCHARMODE' = 'TRUE';
+SELECT session_context('ABAPVARCHARMODE') FROM dummy; --Abfrage ABAP-Modus für leere Zeichenketten
+SET 'ABAPVARCHARMODE' = 'FALSE';
+
 
 /* Per SQL Abfrage aus View M_SESSION_CONTEXT für die aktive Session */
 --Aktuelle Connection-ID für aktive Session ermitteln

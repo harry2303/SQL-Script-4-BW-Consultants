@@ -7,6 +7,7 @@ SET 'DATE_FORMAT' = 'YYYYMMDD';
 --Returns the value of the specified session variable assigned to the current user
 SELECT session_context('DATE_FORMAT') FROM dummy;
 SELECT session_context('CLIENT') FROM dummy; --SAP Mandant (Client)
+SELECT session_context('APPLICATIONUSER') FROM dummy; --SAP SY-UNAME
 --session variable reset
 UNSET 'DATE_FORMAT';
 

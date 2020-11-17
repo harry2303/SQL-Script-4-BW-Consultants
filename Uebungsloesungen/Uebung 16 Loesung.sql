@@ -1,29 +1,11 @@
--- Übung 16: Wiederholung - Anlegen einer Procedure
+-- Übung 16: Alle Tage eines Jahres per Series Generate Function im BW-Format erzeugen lassen
 -- Musterlösungen für alle Teilaufgaben der Übung
 /*************************************************************/
 --Lösungsvorschlag:
-CREATE OR REPLACE PROCEDURE PROC_BANKS (
-            IN iv_bic VARCHAR(11) DEFAULT 'RABODEFFTAR',
-            OUT ot_result BANKS --Type: Table banks
-            )
-LANGUAGE SQLSCRIPT
-SQL SECURITY DEFINER    --The default value for procedures is DEFINER
---READS SQL DATA        --The procedure is read-only: no update, delete or insert is possible  
-AS
-BEGIN 
-/* Write your procedure logic */
+SELECT to_nvarchar(GENERATED_PERIOD_START,'YYYYMMDD') AS calmonth
+    FROM SERIES_GENERATE_DATE('INTERVAL 1 DAY', date'2020-01-01', date'2021-01-01');
 
--- DECLARE & INITIALIZE VARIABLE
-DECLARE lv_bic VARCHAR(11) = 'RABODEFFTAR';
-
---Werte aus IN Parametern in lokale Variablen übernehmen
-lv_bic = :iv_bic;
-
--- RETURN RESULT
-ot_result = SELECT * FROM banks WHERE bic = :lv_bic;
-END;
-
-
--- Aufruf der Procedure mit IN und OUT Parametern (hier: OUT Parameter gebunden an Konsolenausgabe)
--- Neuen Datensatz erzeugen --> Param. ID = NULL
-CALL PROC_BANKS('RABODEFFTAR', ot_result => ?);
+--Unterschied Feldwerte ..._START, ..._END
+SELECT GENERATED_PERIOD_START,
+       GENERATED_PERIOD_END
+    FROM SERIES_GENERATE_DATE('INTERVAL 1 DAY', date'2020-01-01', date'2021-01-01');

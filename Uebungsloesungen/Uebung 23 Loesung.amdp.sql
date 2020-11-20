@@ -4,15 +4,13 @@
 --Lösungsvorschlag:
      /* Anonymer Block: Startroutine - Ausschluss Business Partner 110 */
      --------------------------------------------------------------------
-DO
-BEGIN
+DO BEGIN
     /* Anonymer Block: Startroutine - Ausschluss Business Partner 110 */
     INTAB = SELECT  *
-                 FROM "SAPABAP1"."/BIC/AZIFMADSO17";  -- 7er View (Reporting View) von aDSO ZIFMADSO1 in "ABAP Schema SAPABAP1" 
-    
---    OUTTAB =          -- in anonymen Block OUTTAB auskommentieren und Feldliste aus AMDP Zielstruktur tn_s_out kopieren
-    SELECT recordmode,
-           id,
+                 FROM "SAPABAP1"."/BIC/AZIFMADSO17";  -- 7er View (Reporting View) von aDSO ZIFMADSO1 in "ABAP Schema SAPABAP1"
+
+--OUTTAB=                   -- in anonymen Block OUTTAB auskommentieren und Feldliste aus AMDP Zielstruktur tn_s_out kopieren
+    SELECT id,
            bnk_bic,
            bp_id,
            created,
